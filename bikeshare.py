@@ -199,7 +199,6 @@ def restart():
         if restart == 'no':
             exit()
         elif restart == 'yes':
-            print ('Restarting...\n')
             main()
         else:
             print('Please check your input, Should be yes or no.')
