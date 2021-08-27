@@ -6,7 +6,7 @@ import numpy as np
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
-              
+
 MONTH_DATA = ['january', 'february', 'march',
              'april', 'may', 'june', 'all']
 
@@ -33,7 +33,7 @@ def get_filters():
         else:
             print('\nYour stats will be on: {}\n'.format(city))
             break
-            
+
     # get user input for month (all, january, february, ... , june)
     while True:
         month = input('Which month do you want to filter the data with? All, January, Feburary, March, April, May or June?\n').lower()
@@ -42,7 +42,7 @@ def get_filters():
             break
         else:
             print ('Please check your answer. It should be between January and June, or  All.')
-            
+
     # get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
         day = input("Which day? All, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or Sunday?\n").lower()
@@ -172,15 +172,15 @@ def user_stats(df):
         print('Earliest year:', int(earliest_year),'\n' 'Recent year:', int(most_recent_year),'\n' 'Most common year:', int(most_common_year))
     else:
         print('There is no birth year data for this city')
-        
+
         print('\nThis took %s seconds.' % (time.time() - start_time))
         print('-'*40)
-        
+
     # get input from user to show more rows or not
 def display_raw_data(df):
    pd.set_option('display.max_columns',200)
-   print(df.head()) 
-   next = 0     
+   print(df.head())
+   next = 0
    while True:
         view_more = input('\nWould you like to see more data? Enter yes or no.\n').lower()
         if view_more == 'no':
@@ -191,21 +191,20 @@ def display_raw_data(df):
            print(df.iloc[next:next+5])
         else:
            print('Please check your input, Should be yes or no.')
-            
+
      # get input from user to restart or exit the program
 def restart():
    while True:
         restart = input('\nWould you like to restart? Enter yes or no.\n').lower()
         if restart == 'no':
-            print ('Thankyou, Goodbye.')
             exit()
-        elif restart == 'yes':     
+        elif restart == 'yes':
             print ('Restarting...\n')
             main()
         else:
             print('Please check your input, Should be yes or no.')
-            
-      # main program      
+
+      # main program
 def main():
    while True:
         city, month, day = get_filters()
@@ -217,7 +216,7 @@ def main():
         user_stats(df)
         display_raw_data(df)
         restart()
-            
+
 
 
 if __name__ == "__main__":
