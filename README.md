@@ -1,2 +1,2 @@
 # ruba-repository
- for programming projects
+ for programming and business projects
