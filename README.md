@@ -1,6 +1,13 @@
 # ruba-repository
- This profile for posting my programming and business projects.
+## Intro 
+ This repotisory made for udacity's Github nanodegree projects!
+ Including Bikeshare.
+ __Bikeshare program is a text dashboard for statistical informations about bikeshare in chicago, new york city and washington.
 
- For contact: RubaAlharbii@outlook.com
+ _Thankyou for your support.
 
- Ruba Alharbi.
+
+ _For contact: RubaAlharbii@outlook.com
+
+ ___Ruba Alharbi.
+
